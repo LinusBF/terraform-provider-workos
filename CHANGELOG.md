@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.1](https://github.com/osodevops/terraform-provider-workos/compare/v2.2.0...v2.2.1) (2026-04-09)
+
+
+### Bug Fixes
+
+* add IsUnknown() checks for Optional+Computed fields ([774d8e3](https://github.com/osodevops/terraform-provider-workos/commit/774d8e323cc0d0856c75487c6d45e28a768e63b1))
+* add IsUnknown() checks for Optional+Computed fields ([612617b](https://github.com/osodevops/terraform-provider-workos/commit/612617bd5cc9b9e62bb65c87ec7a4165abd9aca9))
+* correctly parse nested role object from membership API response ([9d9476c](https://github.com/osodevops/terraform-provider-workos/commit/9d9476c71e8817fcf9a9ccf6adf9826162e8dd83))
+* pin GitHub Actions to immutable commit SHAs ([2410473](https://github.com/osodevops/terraform-provider-workos/commit/241047357041aee2d8e677905dfe03708646225b))
+* remove domain uniqueness constraint from organization resource ([27abbbd](https://github.com/osodevops/terraform-provider-workos/commit/27abbbd0401705b54482dfa08350bd89fdecd669))
+
 ## [2.2.0](https://github.com/osodevops/terraform-provider-workos/compare/v2.1.0...v2.2.0) (2026-03-25)
 
 
