@@ -1,0 +1,39 @@
+# Copyright (c) OSO DevOps
+# SPDX-License-Identifier: MPL-2.0
+
+name: Fork Release
+
+on:
+  push:
+    tags:
+      - "v*-linus.*"
+
+permissions:
+  contents: write
+
+jobs:
+  goreleaser:
+    name: Release fork build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: "go.mod"
+          cache: true
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_wrapper: false
+
+      - name: Run GoReleaser
+        uses: goreleaser/goreleaser-action@v6
+        with:
+          version: "~> v2"
+          args: release --clean --config .goreleaser.fork.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
