@@ -185,6 +185,9 @@ func (p *WorkOSProvider) Resources(ctx context.Context) []func() resource.Resour
 		NewOrganizationRolePermissionResource,
 		NewAuthorizationResourceResource,
 		NewAuthorizationRoleAssignmentResource,
+		NewRedirectURIResource,
+		NewCORSOriginResource,
+		NewWebhookEndpointResource,
 	}
 }
 

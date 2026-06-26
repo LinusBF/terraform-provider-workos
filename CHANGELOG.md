@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Features
 
 * add environment role resource and data source for WorkOS Authorization roles
+* add AuthKit redirect URI, AuthKit CORS origin, and webhook endpoint resources
 
 ## [2.3.1](https://github.com/osodevops/terraform-provider-workos/compare/v2.3.0...v2.3.1) (2026-06-04)
 
